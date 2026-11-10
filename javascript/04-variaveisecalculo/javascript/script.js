@@ -7,7 +7,7 @@ const elementoMensagem = document.getElementById("mensagem-boas-vindas");
 
 if (nome.trim()!== " ") {
     //Interpolação de string usando template literals
-    elementoMensagem.textContent = `Olá, ${nome}! Seja bem-VideoEncoder(a).`;
+    elementoMensagem.textContent = `Olá, ${nome}! Seja bem-Vindo(a).`;
 } else{
     elementoMensagem.textContent = "Por favor, digite um nome válido.";
 }
@@ -25,4 +25,13 @@ function calcular() {
     const subtracao = n1 - n2;
     const multiplicacao = n1 * n2;
     const divisao = n2 !== 0 ? (n1 / n2).toFixed(2) :"Divisão por zero não é permitida"
-}
+
+
+//exibição dos resultados com interpolação
+
+divResultados.innerHTML = `
+    <p><strong>soma:</strong> ${n1} + ${n2} = ${soma}</strong></p>
+    <p><strong>subtracao:</strong> ${n1} - ${n2} = ${subtracao}</p>
+    <p><strong>multiplicacao:</strong> ${n1} * ${n2} = ${multiplicacao}</p>
+    <p><strong>divisao:</strong> ${n1} / ${n2} = ${divisao}</p>
+`;}
